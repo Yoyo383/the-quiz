@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: green;
+}
+
+.container {
+  width: 60%;
+  min-height: 80%;
+  padding: 20px;
+  border-radius: 1rem;
+  text-align: center;
+  color: white;
+  background-color: rgb(48, 48, 48);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.question {
+  font-size: 1.8rem;
+  color: aqua;
+}
+
+.score-text {
+  font-size: 2.1rem;
+  color: aqua;
+}
+
+.answer {
+  text-align: left;
+  margin: 8px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 7px;
+  padding-right: 7px;
+  border: 2px solid grey;
+  color: lightgray;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.answer:hover {
+  cursor: pointer;
+  border-color: white;
+}
+
+.footer {
+  font-size: 1.7rem;
+  color: gray;
+}
+
+button {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  width: 30%;
+  border-radius: 0.7rem;
+  border: 2px solid rgb(55, 55, 255);
+  font-size: 2rem;
+  background-color: rgb(46, 175, 255);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(81, 78, 255);
+  border-color: rgb(0, 59, 185);
+}
+
+.welcome-title {
+  font-size: 2.2rem;
+  color: aqua;
+}
+
+pre {
+  font-size: 1.3rem;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+select {
+  background-color: rgb(44, 44, 44);
+  margin: 0;
+  min-width: 50%;
+  font-size: 1.3rem;
+  border: 2px solid grey;
+  color: lightgray;
+  border-radius: 0.5rem;
+  outline: none;
+  padding: 5px;
+}
+
+select:hover {
+  cursor: pointer;
+}
+
+option {
+  color: black;
+  background-color: white;
+}
+
+.default {
+  color: gray;
+}
+
+.correct {
+  color: lime;
+  border-color: lime;
+}
+
+.incorrect {
+  color: red;
+  border-color: red;
+}
+
+.hidden {
+  display: none;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.disabled-middle {
+  pointer-events: none;
+}
+
+.invalid {
+  color: red;
+  font-size: 1.5rem;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="logo.png" />
+    <meta
+      name="description"
+      content="A quiz where you can pick from any topic you want!"
+    />
+    <script src="main.js" defer></script>
+    <title>The Myth Quiz!</title>
+  </head>
+  <body>
+    <div class="container" id="startScreen">
+      <h1 class="welcome-title">Welcome to The Quiz!</h1>
+      <pre>
+For every correct answer you get 4 points.
+Each wrong answer will remove 1 point.
+The maximum amount of points is 100.
+Pick a topic and start!</pre
+      >
+      <div class="options">
+        <select>
+          <option class="default" value="default" selected disabled>
+            -- Select an option --
+          </option>
+          <option>Mythology</option>
+          <option>Books</option>
+          <option>Movies</option>
+          <option>Vehicles</option>
+          <option>Computers</option>
+          <option>Science & Nature</option>
+          <option>Video Games</option>
+          <option>Animals</option>
+          <option>Politics</option>
+          <option>History</option>
+          <option>Sports</option>
+          <option>Math</option>
+          <option>Art</option>
+          <option>Cartoons</option>
+          <option>Anime</option>
+        </select>
+        <button onclick="startGame()" id="start">Start!</button>
+      </div>
+      <p class="invalid" id="invalid"></p>
+    </div>
+    <div class="container hidden" id="game">
+      <p class="question" id="question"></p>
+      <div class="answer" id="1"></div>
+      <div class="answer" id="2"></div>
+      <div class="answer" id="3"></div>
+      <div class="answer" id="4"></div>
+      <p class="footer" id="footer">Waiting for an answer...</p>
+    </div>
+    <div class="container hidden" id="finished">
+      <p class="score-text" id="scoreText">Finished!</p>
+      <button onclick="showStartScreen()" id="playAgain">Play Again</button>
+    </div>
+  </body>
+</html>
