@@ -139,8 +139,8 @@ function startGame() {
     case 'Math':
       url = 'https://opentdb.com/api.php?amount=25&category=19&type=multiple';
       break;
-    case 'Art':
-      url = 'https://opentdb.com/api.php?amount=25&category=25&type=multiple';
+    case 'Geography':
+      url = 'https://opentdb.com/api.php?amount=25&category=22&type=multiple';
       break;
     case 'Cartoons':
       url = 'https://opentdb.com/api.php?amount=25&category=32&type=multiple';
