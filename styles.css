@@ -14,7 +14,6 @@ body {
 }
 
 .container {
-  width: 60%;
   min-height: 80%;
   padding: 20px;
   border-radius: 1rem;
@@ -24,8 +23,13 @@ body {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.fixed-width {
+  width: 60%;
+}
+
 .start-screen {
   display: flex;
+  min-width: 60%;
 }
 
 .question {
