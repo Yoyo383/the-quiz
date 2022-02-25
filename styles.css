@@ -149,7 +149,7 @@ option {
   font-size: 1.5rem;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 992px) {
   .start-screen {
     flex-direction: column;
     align-items: center;
