@@ -86,7 +86,7 @@ button:hover {
   color: aqua;
 }
 
-pre {
+.desc {
   font-size: 1.3rem;
 }
 
@@ -156,7 +156,8 @@ option {
   }
 
   .container {
-    min-height: 90%;
+    width: 80%;
+    height: 90%;
   }
 
   img {
