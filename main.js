@@ -63,7 +63,7 @@ function checkAnswer(e) {
       setTimeout(() => {
         gameElement.classList.add('hidden');
         finishedElement.classList.remove('hidden');
-        scoreText.innerText = `Your score is ${totalScore}!`;
+        scoreText.innerHTML = `Your score is <span style="color: lime">${totalScore}!</span>`;
       }, 1000);
       return;
     }

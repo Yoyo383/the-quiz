@@ -10,16 +10,17 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
+  padding: 0;
   background-color: green;
 }
 
 img {
-  object-fit: cover;
-  padding: 10px;
+  width: 35%;
+  height: 35%;
 }
 
 .container {
-  min-height: 60%;
+  width: 70%;
   padding: 20px;
   border-radius: 1rem;
   text-align: center;
@@ -28,13 +29,9 @@ img {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.fixed-width {
-  width: 60%;
-}
-
 .start-screen {
   display: flex;
-  min-width: 60%;
+  align-items: center;
 }
 
 .question {
@@ -48,6 +45,8 @@ img {
 }
 
 .answer {
+  display: flex;
+  align-items: center;
   text-align: left;
   margin: 8px;
   padding-top: 3px;
@@ -60,9 +59,11 @@ img {
   font-size: 1.5rem;
 }
 
-.answer:hover {
-  cursor: pointer;
-  border-color: white;
+@media all and (min-width: 993px) {
+  .answer:hover {
+    cursor: pointer;
+    border-color: white;
+  }
 }
 
 .footer {
@@ -78,6 +79,7 @@ button {
   border: 2px solid rgb(55, 55, 255);
   font-size: 2rem;
   background-color: rgb(46, 175, 255);
+  color: black;
 }
 
 button:hover {
@@ -152,4 +154,75 @@ option {
 .invalid {
   color: red;
   font-size: 1.5rem;
+}
+
+@media all and (max-width: 992px) {
+  body {
+    height: 100vh;
+  }
+
+  .container {
+    min-height: 70%;
+    min-width: 90%;
+    border-radius: 2rem;
+  }
+
+  .start-screen {
+    flex-direction: column;
+  }
+
+  img {
+    width: 50%;
+    height: 50%;
+  }
+
+  .welcome-title {
+    font-size: 4rem;
+  }
+
+  .desc {
+    font-size: 2.5rem;
+  }
+
+  .options {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  select {
+    height: 7rem;
+    font-size: 3rem;
+  }
+
+  button {
+    height: 7rem;
+    width: 50%;
+    font-size: 3rem;
+  }
+
+  .question {
+    font-size: 4rem;
+  }
+
+  .answer {
+    font-size: 3.3rem;
+    min-height: 14rem;
+    border-radius: 1.5rem;
+    margin: 12px;
+    border-width: 5px;
+    padding-left: 1.5rem;
+  }
+
+  .footer {
+    font-size: 3rem;
+  }
+
+  .invalid {
+    font-size: 3rem;
+  }
+
+  .score-text {
+    font-size: 12rem;
+  }
 }
