@@ -1,3 +1,4 @@
+// all the elements needed
 const questionElement = document.getElementById('question');
 const footer = document.getElementById('footer');
 const scoreText = document.getElementById('scoreText');
@@ -32,6 +33,7 @@ let questionNumber = 0;
 
 let started = false;
 
+// html text to regular
 function decodeHtml(string) {
   const txt = document.createElement('textarea');
   txt.innerHTML = string;
@@ -41,6 +43,7 @@ function decodeHtml(string) {
 }
 
 function checkAnswer(e) {
+  // remove the first 3 chars which are the question number and space (1. )
   if (decodeHtml(e.target.innerHTML.slice(3)) === decodeHtml(correctAnswer)) {
     totalScore += givenScore;
     givenScore = 4;
@@ -50,6 +53,7 @@ function checkAnswer(e) {
     footer.classList.add('correct');
     footer.classList.remove('incorrect');
 
+    // gray out the answers
     answersArray.forEach((answer) => {
       answer.removeEventListener('click', checkAnswer);
       answer.innerHTML.slice(3) === e.target.innerHTML.slice(3)
@@ -57,6 +61,7 @@ function checkAnswer(e) {
         : answer.classList.add('disabled');
     });
 
+    // check if it's the end
     questionNumber++;
     if (questionNumber === 25) {
       started = false;
@@ -68,6 +73,7 @@ function checkAnswer(e) {
       return;
     }
 
+    // show next question after a second.
     setTimeout(() => {
       showQuestion();
     }, 1000);
@@ -83,6 +89,7 @@ function checkAnswer(e) {
   }
 }
 
+// return the questions from the API
 async function getQuestion() {
   return fetch(url).then((res) => res.json());
 }
